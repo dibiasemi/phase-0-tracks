@@ -26,6 +26,7 @@ main {
   display: inline-block;
   vertical-align: top;
 }
+
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
@@ -47,6 +48,7 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
 @media screen and (max-width: 545px) {
   body {
     font-size: small;
@@ -54,12 +56,12 @@ figcaption {
   h1 {
     font-size: medium;
   }
-main {
-  width:100%;
-  display:block;
-}
-
-#external-links {
-  width: 100%;
-  display:block;
+  main {
+    width:100%;
+    display:block;
+  }
+  #external-links {
+    width: 100%;
+    display:block;
+  }
 }
