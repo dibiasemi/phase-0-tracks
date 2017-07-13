@@ -23,7 +23,7 @@ section.job:hover {
     color: white;
     padding: 10px;
 }
-/*Refering an li under an ol but not an ul*/
+/*Refering to an li under an ol but not an ul*/
 ol li {
   background-color: pink;
 }
