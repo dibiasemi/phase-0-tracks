@@ -1,0 +1,29 @@
+section#contact-info p {
+  font-size:0.8em;
+}
+section.job {
+  background-color: #e9e5dc;
+  border-radius: 10px;
+  padding: 10px 0px 10px 0px;
+  margin: 5px 0px 5px 0px;
+}
+/*See below: When there is a conflict between two CSS rules that select the same element, the browser knows to use the "last" rule - meaning as it "cascades" down the lines of code, the line or rule before it is overode by the current one*/
+ul.accomplishments {
+  font-size: 2.0em;
+}
+ul.accomplishments {
+  font-size: 0.8em;
+}
+ol.accomplishments {
+  font-size: 0.8em;
+}
+/*Example of pseudoselector/pseudoclass*/
+section.job:hover {
+    background-color: pink;
+    color: white;
+    padding: 10px;
+}
+/*Refering an li under an ol but not an ul*/
+ol li {
+  background-color: pink;
+}
