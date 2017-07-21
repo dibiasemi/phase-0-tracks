@@ -5,7 +5,6 @@ volume_level = nil
 fur_color = nil
 age = nil
 hampster_adoption = nil
-integer_test = nil
 number_selected = false
 
 puts "Please tell us the hampster's name"
@@ -17,7 +16,7 @@ puts "or please mark the age as (unknown)."
 volume_level = gets.chomp
  if volume_level == "one"
    puts "You selected one."
-   volume_level = 1
+   volume_level = 1 #This converts number selected into an integer
    number_selected = true
  elsif volume_level == "two"
    puts "You selected two."
@@ -109,6 +108,7 @@ fur_color = gets.chomp
 
 puts "How old is #{hampster_name}?"
 age = gets.chomp
+age_int = age.to_i # This converts age to an integer
 
 puts "Is #{hampster_name} a good candidate for adoption? (y/n)?"
 
@@ -135,6 +135,7 @@ def complete(hampster_name,volume_level,fur_color,age,hampster_adoption)
   else
     puts "hampster Name: #{hampster_name}"
   end
+# Because we converted volume_level to a fixnum/integer, we cannot use the conditional statement for length as we did with the other variables because length only considers length of strings
 
   if volume_level == "unknown"
     puts "Volume level: nil"
@@ -155,18 +156,20 @@ def complete(hampster_name,volume_level,fur_color,age,hampster_adoption)
   end
 end
 
+# This accounts for both YES & NO as well as whether or not the hampster was named
   if hampster_name.length == 0
-    if hampster_adoption = true
+    if hampster_adoption == true
       puts "hampster Adopted?: nil was #{adopted_final}"
     else
       puts "hampster Adopted?: #{hampster_name} was #{adopted_final}"
     end
     else
-    if hampster_adoption = false
+    if hampster_adoption == false
       puts "hampster Adopted?: nil was #{adopted_final}"
     else
       puts "hampster Adopted?: #{hampster_name} was #{adopted_final}"
     end
   end
 
+#This calls the method from above
 complete(hampster_name,volume_level,fur_color,age,hampster_adoption)
