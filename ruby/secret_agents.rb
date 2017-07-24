@@ -50,15 +50,27 @@ end
 # puts decrypt(encrypt("swordfish"))
 # # The nested methods work because the output of one is equal to the input of another = same word.
 
+
+# Conducts the requested operation, prints the result to the screen, and exits
+response = false
+process = nil
+message = nil
+until response == true
 # Asks a secret agent (the user) whether they would like to decrypt or encrypt a password
 puts "Would you like to decrypt or encrypt a password?"
-method = gets.chomp
+process = gets.chomp
 # Asks them for the password
-puts "Ok then, give me a password to #{method}:"
-password = gets.chomp
-# Conducts the requested operation, prints the result to the screen, and exits
-if method == "encrypt"
-  puts encrypt(password)
-else
-  puts decrypt(password)
+puts "Ok then, give me a password to #{process}:"
+message = gets.chomp
+  if process == "encrypt"
+    puts "The following is your new encrypted password:"
+    puts encrypt(message)
+    response = true
+  elsif process == "decrypt"
+    puts "The following is your new decrypted password:"
+    puts decrypt(message)
+    response = true
+  else
+    puts "I didn't understand you"
+  end
 end
