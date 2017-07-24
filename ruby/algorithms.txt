@@ -1,0 +1,60 @@
+#Algorithm for using an elevator in hotel
+Determine current floor number
+Determine desired floor/destination
+  If destination is hotel room;
+  - then determine hotel room floor number by reading hotel key.
+  If destination is hotel Lobby or pool;
+  - then determine if current floor is lower/higher than desired floor by reading hotel directory.
+  If current floor is lower than desired floor;
+  - then select the top button
+  If current floor is higher than desiered floor;
+  - then select the bottom button
+From range of numbers inside elevator, select number that equals the desired floor number, unless;
+  The desired floor is "Lobby;"
+  - then select "L" button.
+  The desired floor is "Pool;"
+  - then select "P" button.
+If elevator stops at a floor not equal to desired floor;
+- do not exit the elevator
+Otherwise, when desired floor is reached;
+- exit the elevator
+
+#Algorithm for making bedtime tea
+Determine time of day
+  If before 8p;
+  - the make coffee, you crazy.
+  If after 8p;
+  - proceed with steps to make tea
+Pick flavor of tea:
+  - Sleeptime Tea
+  - Earl Grey (decaf)
+  - Chamomile/Lavender
+Pick out cup:
+  If cup is glass && does not have handle
+  - then you have a glass cup, put it back
+  If cup is ceramic && and has handle
+  - then you have a mug, good job, use it
+Determine how to heat water:
+  - If microwave;
+  1. Then fill cup with 8oz water
+  2. Then set microwave for 1 minute 47 seconds
+  3. When water is boiling (temp = 212degF) or at desired temp;
+    - then place tea bag inside cup
+    - If not at desired temp, then repeat Step 2.
+  4. While stirring, add sugar or honey to desired flavor
+    - If not at desired flavor, then repeat Step 4
+    - Otherwise, if sugar or honey is not desired, skip Step 4.
+  Otherwise;
+  5. Drink tea
+  - If stovetop
+  1. Fill pot with 8ox water
+  2. Turn on stove top to high heat
+  3. Bring water to boil (temp = 212degF) or desired temp.
+  4. Put tea bag inside cup
+  5. Pour hot water over tea bag
+  6. While stirring, add sugar or honey to desired flavor
+    - If not at desired flavor, then repeat Step 6.
+    - Otherwise, if sugar or honey is not desired, skip Step 6.
+  7. Drink tea
+
+
