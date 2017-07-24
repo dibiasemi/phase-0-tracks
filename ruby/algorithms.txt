@@ -20,20 +20,20 @@ Otherwise, when desired floor is reached;
 - exit the elevator
 
 #Algorithm for making bedtime tea
-Determine time of day
+Determine time of day;
   If before 8p;
-  - the make coffee, you crazy.
+  - then make coffee, you crazy.
   If after 8p;
-  - proceed with steps to make tea
-Pick flavor of tea:
+  - proceed with steps to make tea.
+Pick flavor of tea;
   - Sleeptime Tea
   - Earl Grey (decaf)
   - Chamomile/Lavender
-Pick out cup:
-  If cup is glass && does not have handle
-  - then you have a glass cup, put it back
-  If cup is ceramic && and has handle
-  - then you have a mug, good job, use it
+Pick out cup;
+  If cup is glass && does not have handle;
+  - then you have a glass cup, put it back.
+  If cup is ceramic && and has handle;
+  - then you have a mug, good job, use it.
 Determine how to heat water:
   - If microwave;
   1. Then fill cup with 8oz water
@@ -41,10 +41,9 @@ Determine how to heat water:
   3. When water is boiling (temp = 212degF) or at desired temp;
     - then place tea bag inside cup
     - If not at desired temp, then repeat Step 2.
-  4. While stirring, add sugar or honey to desired flavor
+  4. While stirring, add sugar or honey until desired flavor is reached.
     - If not at desired flavor, then repeat Step 4
     - Otherwise, if sugar or honey is not desired, skip Step 4.
-  Otherwise;
   5. Drink tea
   - If stovetop
   1. Fill pot with 8ox water
@@ -52,7 +51,7 @@ Determine how to heat water:
   3. Bring water to boil (temp = 212degF) or desired temp.
   4. Put tea bag inside cup
   5. Pour hot water over tea bag
-  6. While stirring, add sugar or honey to desired flavor
+  6. While stirring, add sugar or honey until desired desired flavor is reached
     - If not at desired flavor, then repeat Step 6.
     - Otherwise, if sugar or honey is not desired, skip Step 6.
   7. Drink tea
