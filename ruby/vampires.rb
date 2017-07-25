@@ -44,30 +44,30 @@ until i == number
   age_correct = abs_age_diff == 0
   vampire_status = 0
 
-  if sunshine_allergy
-    vampire_status = 2
-  end
-
-  if vampire_status == 0 && age_correct
+  if age_correct
     if garlic == "y" || benefits == "y"
       vampire_status = 1
     end
   end
 
-  if vampire_status == 0 && !age_correct
-    if garlic == "n" && benefits == "n"
-      vampire_status = 3
-    end
-  end
-
-  if vampire_status == 0 && !age_correct
+  if !age_correct
     if garlic == "n" || benefits == "n"
       vampire_status = 2
     end
   end
 
+  if !age_correct
+    if garlic == "n" && benefits == "n"
+      vampire_status = 3
+    end
+  end
+
   if name == "Drake Cula" || name == "Tu Fang"
     vampire_status = 4
+  end
+
+  if sunshine_allergy
+    vampire_status = 2
   end
 
   result = "Results inconclusive"
