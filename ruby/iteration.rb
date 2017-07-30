@@ -94,5 +94,13 @@ p colors_hash
 colors_hash.keep_if {|x1,x2| x2.length >=4}
 p colors_hash
 
-#A method that will remove items from a data structure until the condtion in the black evaulates to false, then stops.
+#A method that will remove items from a data structure until the condtion in the block evaulates to false, then stops.
+
+p colors
+p colors.drop_while {|x| x != "green"}
+
+
+p colors_hash
+p colors_hash.drop_while {|x1,x2| x2 != "orange"}
+
 
