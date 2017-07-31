@@ -23,6 +23,10 @@ def algorithm(name)
       new_name << vowels[vowels.index(letter)+1]
     elsif alpha.include?(letter)
       new_name << alpha[alpha.index(letter)+1]
+    elsif letter == "z" #edge case for consonants
+      new_name << "b"
+    elsif letter == "u" #edge case for vowels
+      new_name << "a"
     elsif letter == " "
       new_name << " "
     end }
