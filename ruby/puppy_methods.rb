@@ -34,21 +34,74 @@ class Puppy
 
 end
 
-#Driver Code
-object = Puppy.new
-object.fetch("ball")
+# #Driver Code
+# object = Puppy.new
+# object.fetch("ball")
 
-object2 = Puppy.new
-object2.speak("4")
+# object = Puppy.new
+# object.speak("4")
 
-object3 = Puppy.new
-object3.roll_over
+# object = Puppy.new
+# object.roll_over
 
-object4 = Puppy.new
-object4.dog_years(20)
+# object = Puppy.new
+# object.dog_years(20)
 
-object5 = Puppy.new
-object5.jump(3)
+# object = Puppy.new
+# object.jump(3)
+
+array = []
+1.times do
+  instances = Puppy.new
+  array.push(instances)
+end
+
+array.each do |instances|
+  instances.speak("4")
+  instances.roll_over
+  instances.dog_years(20)
+  instances.jump(3)
+end
+
+class Party
+
+  def initialize
+    puts "lets partayyyy!"
+  end
+
+  def drinks(no_drinks)
+    x = no_drinks.to_i
+      x.times do |x|
+        puts "You've had #{x} drinks!!"
+    end
+
+  def dance
+    puts "I'm dancing!! "
+  end
+end
+end
+
+
+array_example = []
+y = 1
+while y <50
+  party_animal = Party.new
+  array_example << party_animal
+y+= 1
+end
+
+array_example.each do |party_animal|
+  party_animal.drinks(6)
+  party_animal.dance
+end
+
+
+party_animal = Party.new
+party_animal.drinks(4)
+party_animal = Party.new
+party_animal.dance
+
+
 
 
 
