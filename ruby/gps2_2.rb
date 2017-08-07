@@ -81,11 +81,19 @@ print_list(master_list)
 #   Indent sections that are dependent on lines above it
 
 # What are the tradeoffs of using arrays and hashes for this challenge?
+# The benefit to using hashes gives more flexibility to the data; you can not only add a new item but you can also alter the quantity of a grocery list item. Although arrays are more natural and comfortable to work with, hashes provide more opportunity than just a simple "list"
 
 # What does a method return?
+# Methods always return one object. In order to return a bunch of things at once, methods can return arrays or hashes, however, the array/hash itself is just one object. Additionally, a method will return the value that was returned from the last evaluated statement. Most often, this is the last line in the method body.
 
 # What kind of things can you pass into methods as arguments?
+# 1. Array aruguments: situations where you need to accept an undetermined number of arguments, or just some optional ones.
+# 2. Hash arguments: Retrieving array values by their index may not be that useful; Ruby offers hash arguments, so you can access their values by their key, making your code more readable.
+# 3. Positional arguments: The most common way of passing them is by using positional arguments. Every argument has it's own position, they must be passed in the same order as they are defined and all of them are required.
+# 4. Default values: If an argument is missing, you can avoid a "wrong number of arguments" error by assigning a default value
 
 # How can you pass information between methods?
+# You can pass information bewteen methods by storing their output in a variable.
 
 # What concepts were solidified in this challenge, and what concepts are still confusing?
+# Concepts that are still confusing are just the nature of hashes in general and the ability to make them more "dynamic" - setting up code appropriately to be able to account for for unknowns/user input and behavior properly still requires a lot of thought and practice.
