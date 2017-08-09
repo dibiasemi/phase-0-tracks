@@ -66,16 +66,16 @@ end
 #   puts "We have now added a Santa who is a #{ethnicity[i]}, #{gender[i]}"
 # end
 
-# # Release 2 and 3 Driver Code
-# santy = Santa.new("female","Italian")
-# p santy
-# santy.celebrate_birthday
-# p santy
-# santy.get_mad_at("Vixon")
-# p santy
-# p santy.gender = "Male"
-# p santy.ethnicity
-# p santy.age
+# Release 2 and 3 Driver Code
+santy = Santa.new("female","Italian")
+p santy
+santy.celebrate_birthday
+p santy
+santy.get_mad_at("Vixen")
+p santy
+p santy.gender = "Male"
+p santy.ethnicity
+p santy.age
 
 #Release 4 Driver code - Multiple Santas
 gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
