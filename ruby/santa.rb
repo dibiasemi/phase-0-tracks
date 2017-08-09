@@ -80,12 +80,9 @@ end
 #Release 4 Driver code - Multiple Santas
 gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-for i in (1..100)
-  random_gender = gender.sample
-  random_ethnicity = ethnicity.sample
-  random_santa = Santa.new(random_gender,random_ethnicity)
+
+100.times do
+  random_santa = Santa.new(gender.sample,ethnicity.sample)
   random_santa.age = rand(140)
   puts "This random sanata is " + random_santa.gender.to_s + ", they are " + random_santa.ethnicity.to_s + ", and " + random_santa.age.to_s + " years old."
 end
-
-
