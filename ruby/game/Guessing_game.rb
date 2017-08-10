@@ -28,7 +28,7 @@ correct_guess = ''
 def add_placeholder(rand_word, guessed_letter)
   placeholder = ''
   rand_word.chars do |letter|
-    placeholder += (guessed_letter.include? letter)? letter : ' _'
+    placeholder += guessed_letter.include?(letter)? letter : ' _'
   end
   placeholder
 end
@@ -36,7 +36,7 @@ end
 puts 'Can you guess what word this is?!'+ add_placeholder(word, "")
 
 while true
-  print "Please guess a letter [#{total_chances - wrong_guess} chances left]:"
+  print "Please guess a letter - you have #{total_chances - wrong_guess} chances left:"
 
   letter = gets.chomp
 
