@@ -31,3 +31,17 @@ var new_car2 = new Car("pink","2015","Nissan","Roque");
 console.log("Check out my new car, it's a: " +  new_car2.year + " " + new_car2.color + " " + new_car2.make + " " + new_car2.model)
 console.log("Listen to it roar!")
 new_car.sound();
+
+
+//  Atempting to loop through the keys and values of an object
+
+// var car_makes = ["Mercedes", "Jeep", "Mustang", "Porsche"];
+// var car_colors = ["white", "black", "grey", "silver"]
+// var cars = {};
+// for (var i = 0; i < car_makes.length; i++) {
+//   console.log("Build your dream car:");
+//   cars[car_makes[i]] = new Car(car_makes[i], car_colors[i]);
+//   console.log(cars[car_makes[i]].model);
+//   console.log(cars[car_makes[i]].year);
+//   cars[car_makes[i]].sound();
+// }
