@@ -3,7 +3,7 @@
 # We spent [#] hours on this challenge.
 # EXPLANATION OF require_relative
 # Link to ruby file in same directory or import libraries that aren't included by default
-#
+
 require_relative 'state_data'
 class VirusPredictor
 # Taking in arguments and initializing instance variables
@@ -66,4 +66,17 @@ STATE_DATA.each {|state, data| VirusPredictor.new(state).virus_effects }
 
 # Reflection Section
 
-#symbols are immutable - make an object, it creates a new hash object and each key is a new string object and their value is a hash; there are two key value pairs which both are symbols with integer values --- and it takes space and processing power to manipulate
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+  # symbols are immutable - make an object, it creates a new hash object and each key is a new string object and their value is a hash; there are two key value pairs which both are symbols with integer values --- and it takes space and processing power to manipulate
+
+# What does require_relative do? How is it different from require?
+  # As mentioned above, require_relative is used to link to ruby file in same directory or import libraries that aren't included by default. "Require" requires a path or directory name and file name with extension
+
+# What are some ways to iterate through a hash?
+  # In this challenge we used the .each method to iterate through a hash.
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+  # The one thing that stood out to me wa that the methods being called had instance variables as the arguments.
+
+# What concept did you most solidify in this challenge?
+  # I can't say I solidified it, but I did gain a much deeper understanding of refactoring. Our guide taught us some really cool concepts and "mnemonic devices" for refactoring
