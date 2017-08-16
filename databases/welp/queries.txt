@@ -1,0 +1,33 @@
+8.4 Mandatory Pairing: Many-to-Many Relationships
+Release 2: View a Many-to-Many Relationship
+
+1. You've joined two tables before. How do you join three?
+COMMAND:
+SELECT * FROM businesses, reviews,  users WHERE users.id = reviews.user_id AND reviews.businesses_id = businesses.id;
+OUTPUT:
+1|Grundy Hollow|4|Great Food|1|1|1|Bradford|Pitt
+2|Amir's Towing|3.5|Burger was OK|2|2|2|Mandy|Kaling
+1|Grundy Hollow|5|Excellent service!|1|3|3|Angela|Jolie
+
+2.There are some repetitive columns if we choose to view all fields. Choose instead to just view the user's names, the business name, the star rating, and the comment.
+
+COMMAND:
+SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comments FROM businesses INNER JOIN reviews ON businesses.id = reviews.businesses_id INNER JOIN users ON reviews.user_id = users.id;
+OUTPUT:
+Bradford|Pitt|Grundy Hollow|4|Great Food
+Mandy|Kaling|Amir's Towing|3.5|Burger was OK
+Angela|Jolie|Grundy Hollow|5|Excellent service!
+
+3. How do you view the data of all three tables for just one particular business? 
+COMMAND: 
+SELECT * FROM users, reviews, businesses  WHERE reviews.businesses_id = 1 AND reviews.businesses_id = businesses.id AND users.id = reviews.user_id;
+OUTPUT:
+1|Bradford|Pitt|4|Great Food|1|1|1|Grundy Hollow
+3|Angela|Jolie|5|Excellent service!|1|3|1|Grundy Hollow
+
+WE CAN DELETE REPETITIVE COLUMNS USING THIS COMMAND: 
+
+COMMAND: SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comments FROM businesses INNER JOIN reviews ON businesses.id = reviews.businesses_id INNER JOIN users ON reviews.user_id = users.id WHERE reviews.businesses_id =1;
+OUTPUT:
+Bradford|Pitt|Grundy Hollow|4|Great Food
+Angela|Jolie|Grundy Hollow|5|Excellent service!
