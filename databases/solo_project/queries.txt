@@ -1,0 +1,73 @@
+8.3 Solo Challenge: Build a Database 
+
+Run a SQL query for each of the following:
+
+Display the information in one table (either table is fine).
+COMMAND:
+SELECT * FROM cust_order;
+
+OUTPUT: 
+|Rocky Rhoades|2|true|1
+|Sheri Garcia|3|false|2
+|Michelle|2|true|4
+|Marsha Mellow|1|true|3
+|Ryan|3|false|4
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+COMMAND(S):
+UPDATE cust_order SET num_scoops=3 WHERE cust_name = "Michelle";
+SELECT * FROM cust_order;
+
+OUTPUT: 
+|Rocky Rhoades|2|true|1
+|Sheri Garcia|3|false|2
+|Michelle|3|true|4
+|Marsha Mellow|1|true|3
+|Ryan|3|false|4
+
+
+Display the information in both tables using one query.
+COMMAND:
+SELECT * FROM cust_order, flavors WHERE cust_order.flavor_id = flavors.id;
+
+OUTPUT:
+|Rocky Rhoades|2|true|1|1|Mint Choco Chip
+|Sheri Garcia|3|false|2|2|Strawberry
+|Michelle|3|true|4|4|Rocky Road
+|Marsha Mellow|1|true|3|3|Cookie Dough
+|Ryan|3|false|4|4|Rocky Road
+
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+COMMAND:
+SELECT cust_name, num_scoops FROM cust_order;
+
+OUTPUT:
+Rocky Rhoades|2
+Sheri Garcia|3
+Michelle|3
+Marsha Mellow|1
+Ryan|3
+
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+COMMAND(S):
+DELETE FROM cust_order WHERE cust_name = "Ryan";
+SELECT * FROM cust_order;
+
+OUTPUT: 
+|Rocky Rhoades|2|true|1
+|Sheri Garcia|3|false|2
+|Michelle|3|true|4
+|Marsha Mellow|1|true|3
+
+JOINS:
+COMMAND:
+SELECT cust_name, num_scoops, whipped_cream, flavors.flavor FROM cust_order JOIN flavors ON cust_order.flavor_id = flavors.id;
+
+OUTPUT:
+Rocky Rhoades|2|true|Mint Choco Chip
+Sheri Garcia|3|false|Strawberry
+Michelle|3|true|Rocky Road
+Marsha Mellow|1|true|Cookie Dough
